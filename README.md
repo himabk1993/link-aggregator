@@ -66,7 +66,7 @@ Users:
   john@betao.se - last successful payment: 2021-01-15T00:00:00 - subscribed to Product A
   peter@betao.se - last successful payment: 2021-01-15T00:00:00 - subscribed to Product B
   andrew@betao.se - last successful payment: 2021-01-17T00:00:00 - subscribed to Product B
-  boris@betao.se - last successful payment: 2020-12-15T00:00:00 - subscribed to Product B
+  boris@betao.se - last successful payment: 2020-12-15T00:00:00 - subscribed to Product A
   boris@betao.se - last successful payment: 2020-12-15T00:00:00 - subscribed to Product B
 Products:
   Product A: 590kr initial, 290kr recurring
