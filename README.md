@@ -70,4 +70,4 @@ Current date: 2021-02-16
 ```
 
 ## Submission
-Send your zipped files to solen@betao.se
+Send your zipped files to `solen@betao.se` and `emma.edlund@betao.se`.
