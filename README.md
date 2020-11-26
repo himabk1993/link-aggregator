@@ -50,10 +50,19 @@ You have been assigned the task to enhance Netao's system to be able to handle m
 - Each user can have multiple subscriptions running concurrently, but only one subscription per product.
 
 ## Tasks
-- Suggest a Python class model to support those requirements. The new data model needs to be able to express and persist transactions (payments made), subscriptions and product accesses ("does the user have access to this product at this datetime?"). The model does not need to implement any method yet.
-- Write a function that takes as input a set of Users from the model you suggested above, and that returns all users that should be charged now() and for how much. Mock all data necessary in order to run the function, examples of a dataset given below (not required to be used). Do not use a database.
+- Suggest a Python class model to support those requirements. The new data model needs to be able to express and persist transactions (payments made), subscriptions, ("User A is subscribed to product B") and product accesses ("Does User A have access to Product B at this datetime?"). The model does not need to implement any method yet, but if during your work you decided to write some methods to try out your models, there is no downside in leaving them in the submission.
+- Write a function `should_charge` that takes as input a set of Users from the model you suggested in the question above, and that returns all users that should be charged until that date and for how much, as a list of strings. As stated in the requirements, users should be charged if it has been more than a month since their last successful payment on any subscription they belong to. 
+
+Mock all data necessary in order to run the function. Examples of a dataset for testing the function given below (not required to be used). Do not use a database.
+Example:
+```python
+   # users holds your model of users as you defined in question 1
+   should_charge(users=users, dt=datetime.now()) -> ['bob@betao.se: 290kr', 'john@betao.se: 290kr']
+```
+
+
 Bonus:
-- Write a function that takes an user and a product as input, and returns if the user is currently able to access that product (boolean).
+- Write a function that takes an user and a product as input, and returns if the user is currently able to access that product (as a boolean).
 
 ```
 Users: 
