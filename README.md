@@ -1,4 +1,4 @@
-# Betao Senior Back-End assignment
+# Betao Back-End assignment
 
 ## Case
 
