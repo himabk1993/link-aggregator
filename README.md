@@ -1,6 +1,36 @@
 # Betao Back-End assignment
 
-## Case
+## Problem A: The Overflowing Folder
+
+You are working on a Django application, hosted on a virtual cloud server (e.g. an instance on Amazon EC2 or Google Cloud, a droplet on Digital Ocean, an Heroku Dyno...).
+
+Your application collects documents and saves them in the folder `/media/documents`. That folder is located directly on the file system of your virtual server. 
+
+The documents you are handling are small binary files (pdf-like), with a size ranging between 2Mb and 10Mb. 
+
+A (very summarized) codebase can be found just below.
+
+```python
+from django import models
+from django.core.files.storage import FileSystemStorage
+
+fs = FileSystemStorage(location='/media/documents')
+
+class Document(models.Model):
+    title = models.CharField(max_length=200)
+    document = models.FileField(storage=fs)
+    # ...
+```
+
+After a few years of operations, and after having collected 2 terabytes of documents, you realize that you are running out of storage on your server. At the current rate of writes, you will hit 0 space left in roughly 4 days. Your task is to find a way to keep your service up and running, without losing any data in the process.
+
+For some reason, you are unable to add block storage or scale the file system capacity of your server. You can consider your instance "locked" in terms of resources. On the other hand, you still have access to all other services provided by your cloud host, and have access to reasonable budget if needs be.
+
+Can you think of a few ways to get yourself out of this situation, and what would be the best course of action you recommend? 
+
+You can illustrate your solution with diagrams, commands, code or pseudocode, if you need.
+
+## Problem B: The Money Schedule
 
 Netao is a tech startup that got traction selling a web application for a one-time fee of 100€. The process is simple: the user would go on their website, buy the service using a credit card, and Netao would then deliver access to the web application. Payments are currently collected through a third-party credit card processor. 
 
