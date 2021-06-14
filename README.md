@@ -80,16 +80,16 @@ class UserAccess:
 
 You have been assigned the task to enhance Netao's system to be able to handle multiple products, recurring subscriptions, and product access management. Here are the requirements we have gathered:
 
-- Each Product (=software) has a recommended initial price and a recurring price. There is great likelyhood that we will need to implement discounts for specific users later on.
+- Each Product has a recommended initial price and a recurring price.
 - The initial price will be charged immediately as the user subscribes. The user will have access to the service for 30 days after the initial payment.
-- The system needs to persist every payment made, by who, when and for what product.
 - The recurring price will be charged every 30 days, and will kick in after 30 days from the initial subscription. For example, if a user buys the service on `2021-01-01T00:00` and pays the initial price, the system will attempt to charge her the recurring price at `2021-01-31T00:00`, then on `2021-03-02T00:00`, and so forth.
 - If a recurring payment fails, the user will lose access to the service, and no further attempts at collecting payments will be made.
+- The system needs to persist every payment made, by who, when and for what product.
 - Each user can have multiple subscriptions running concurrently, but only one subscription per product.
 
 ## Tasks
 1. Suggest a Python class model to support those requirements. The new data model needs to be able to express and persist transactions (payments made), subscriptions, ("User A is subscribed to product B") and product accesses ("Does User A have access to Product B at this datetime?"). The model does not need to implement any method yet, but if during your work you decided to write some methods to try out your models, there is no downside in leaving them in the submission.
-2. Write a function `should_charge` that takes as input a set of Users from the model you suggested in the question above, and that returns all users that should be charged until that date and for how much, as a list of strings. As stated in the requirements, users should be charged if it has been more than a month since their last successful payment on any subscription they belong to. 
+2. Write a function `should_charge` that takes as input a set of Users from the model you suggested in the question above and a datetime, and that returns all users that should be charged until that date and for how much, as a list of strings. As stated in the requirements, users should be charged a month after their last successful payment on any subscription they belong to, unless their subscription has already been cancelled by failing a payment.
 
 Example use of `should_charge`:
 ```python
