@@ -32,7 +32,7 @@ You can illustrate your solution with diagrams, commands, code or pseudocode, if
 
 ## Problem B: The Money Schedule
 
-Netao is a tech startup that got traction selling a web application for a one-time fee of 100€. The process is simple: the user would go on their website, buy the service using a credit card, and Netao would then deliver access to the web application. Payments are currently collected through a third-party credit card processor. 
+Netao is a tech startup that got traction selling a web application for a one-time fee of 100€. The process is simple: the user would go on their website, buy the service using a credit card, and Netao would then deliver access to the web application. Payments are collected through a third-party credit card processor. 
 
 A business developer at Netao wants to increase revenue by switching to a subscription-based model. He suggests that by offering a SaaS (software-as-a-service) solution to their clients and lowering the initial fee, Netao will be able to collect recurring revenue and increase their turnover.
 
@@ -48,26 +48,34 @@ Below are the current partial implementations of the User, Product and Transacti
 
 class User
     /* Unique identifier */
-    public int id
+    int id
     /* Allows permanent access to the web application if the user has made a purchase */
-    public boolean has_access
+    boolean has_access
 
 class Product
     /* Unique identifier */
-    public int id
-    public string name
+    int id
+    string name
     /* Recommended price */ 
-    public int price
+    int price
 
 class Transaction:
     /* Buyer's ID */
-    public int user_id // buyer
+    int user_id // buyer
     /* product paid for */
-    public int product_id
+    int product_id
     /* date of purchase */
-    public date date
+    date date
     /* actual price paid */
-    public int price
+    int price
+    
+class UserAccess:
+    /* The User who has access */
+    int user_id
+    /* The Product which is being accessed */
+    int product_id
+    /* Whether the user has access to that product */
+    bool has_access
 ``` 
 
 You have been assigned the task to enhance Netao's system to be able to handle multiple products, recurring subscriptions, and product access management. Here are the requirements we have gathered:
