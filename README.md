@@ -88,7 +88,13 @@ You have been assigned the task to enhance Netao's system to be able to handle m
 - Each user can have multiple subscriptions running concurrently, but only one subscription per product.
 
 ## Tasks
-1. Suggest a Python class model to support those requirements. The new data model needs to be able to express and persist transactions (payments made), subscriptions, ("User A is subscribed to product B") and product accesses ("Does User A have access to Product B at this datetime?"). The model does not need to implement any method yet, but if during your work you decided to write some methods to try out your models, there is no downside in leaving them in the submission.
+1. Suggest a Python class model to support those requirements. The new data model needs to be able to express and persist:
+    - transactions (payments made)
+    - subscriptions ("User A is subscribed to product B")
+    - product accesses ("Does User A have access to Product B at this datetime?")
+   
+The model does not need to implement any method yet, but if during your work you decided to write some methods to try out your models, there is no downside in leaving them in the submission.
+
 2. Write a function `should_charge` that takes as input a set of Users from the model you suggested in the question above and a datetime, and that returns all users that should be charged until that date and for how much, as a list of strings. As stated in the requirements, users should be charged a month after their last successful payment on any subscription they belong to, unless their subscription has already been cancelled by failing a payment.
 
 Example use of `should_charge`:
