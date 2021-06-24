@@ -113,8 +113,8 @@ Users:
   boris@betao.se - last successful payment: 2020-12-15T00:00:00 - subscribed to Product A
   boris@betao.se - last successful payment: 2020-12-15T00:00:00 - subscribed to Product B
 Products:
-  Product A: 590kr initial, 290kr recurring
-  Product B: 1090kr initial, 109kr recurring
+  Product A: 59€ initial, 29€ recurring
+  Product B: 109€ initial, 10.9€ recurring
 Current date: 2021-02-16
 ```
 
