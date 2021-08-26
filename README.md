@@ -4,9 +4,9 @@
 
 You are working on a Django application, hosted on a virtual cloud server (e.g. an instance on Amazon EC2 or Google Cloud, a droplet on Digital Ocean, an Heroku Dyno...).
 
-Your application collects documents and saves them in the folder `/media/documents`. That folder is located directly on the file system of your virtual server. 
+Your application collects user-uploaded documents and saves them in the folder `/media/documents`. That folder is located directly on the file system of your virtual server. 
 
-The documents you are handling are small binary files (pdf-like), with a size ranging between 2Mb and 10Mb. 
+The documents you are handling are small binary files (pdf-like), with a size ranging between 2Mb and 10Mb. All documents are accessed on a frequent basis, and it is important that they can be accessed fast if needed.
 
 A (very summarized) codebase can be found just below.
 
@@ -125,4 +125,4 @@ Bonus:
 3. Write a function that takes an user and a product as input, and returns if the user is currently able to access that product (as a boolean).
 
 ## Submission
-Send your zipped files to `solen@betao.se` and `emma.edlund@betao.se`.
+Send your zipped files to `solen@betao.se`.
