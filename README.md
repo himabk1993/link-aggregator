@@ -123,8 +123,13 @@ Current date: 2021-02-16
 ```
 
 
-Bonus:
+## Bonus
 3. Write a function that takes an user and a product as input, and returns if the user is currently able to access that product (as a boolean).
+
+4. Containerize your solution. Write a Dockerfile that can be used to build a container able to run your above code. Your container should be able to be built and ran using the following commands:
+```bash
+docker run -it $(docker build -q .)
+```
 
 ## Submission
 Send your zipped files to `solen@betao.se`.
