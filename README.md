@@ -26,7 +26,9 @@ After a few years of operations, and after having collected 2 terabytes of docum
 
 For some reason, you are unable to add block storage or scale the file system capacity of your server. You can consider your instance "locked" in terms of resources. On the other hand, you still have access to all other services provided by your cloud host, and have access to reasonable budget if needs be.
 
-Can you think of a few ways to get yourself out of this situation, and what would be the best course of action you recommend? 
+Can you think of a few ways to get yourself out of this situation short-term, and what would be the best course of action you recommend? 
+
+What would be a long-term fix and what would be the the steps required to implement? 
 
 You can illustrate your solution with diagrams, commands, code or pseudocode, if you need.
 
