@@ -20,18 +20,18 @@ A Link is mostly an URL associated with scoring data. A proposal has been made t
 }
 ```
 
-Our API will allow consumers:
+Our API will allow clients:
 - to **create** new Links by sending a `POST` request with the following data to the `/api/links` endpoint:
   ```json
   {
     "url": "https://www.yahoo.com/"
   }
   ```
-  The link should be validated as being a proper URL.
+  The link should be validated as being a valid URL.
 - to **retrieve** all Links submitted, sorted by their Score, by sending a `GET` request to the `/api/links` endpoint.
 - to perform **actions** on each Link:
-  - **Upvote**, by sending a `POST` request to the `/api/links/{linkId}/upvote` endpoint. This should add 1 to the "upvotes" property.
-  - **Downvote**, by sending a `POST` request to the `/api/links/{linkId}/downvote` endpoint. This should add 1 to the "downvotes" property.
+  - **Upvote**, by sending a `POST` request to the `/api/links/{linkId}/upvote` endpoint. This should add 1 to the "upvotes" property for that Link.
+  - **Downvote**, by sending a `POST` request to the `/api/links/{linkId}/downvote` endpoint. This should add 1 to the "downvotes" property for that Link.
 
 
 ## Goals
@@ -41,7 +41,7 @@ Our API will allow consumers:
 - Bonus: Write some API tests to check if your endpoints are behaving properly
 
 ## Scope
-- The submission will run on the latest Python version (3.10 at the moment of writing)
+- The submission will run on the latest Python version (3.11 at the moment of writing)
 - No authentication or user management is necessary.
 - No frontend is necessary.
 - No python libraries besides Django and Django Rest Framework are necessary.
