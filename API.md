@@ -45,3 +45,4 @@ Our API will allow consumers:
 - No authentication or user management is necessary.
 - No frontend is necessary.
 - No python libraries besides Django and Django Rest Framework are necessary.
+- If you are not familiar with Django, any web framework (or none) of your choice will be admitted.
